@@ -1,0 +1,51 @@
+# randomtest
+
+Lightweight helpers for generating quick random data in tests and scripts. The package ships a few convenience functions so you can avoid rewriting simple generators in every project.
+
+## Installation
+
+Install directly from the repository or a built wheel:
+
+```bash
+pip install .
+```
+
+## Usage
+
+```python
+from randomtest import random_choice, random_int, random_string
+
+value = random_int(10, 99)
+letter = random_choice(["a", "b", "c"])
+token = random_string(length=12)
+
+# Adaptive random testing with FSCs
+from random import Random
+from randomtest import adaptive_random_testing
+
+def make_candidate(rng: Random) -> str:
+    # Example: random 4-word phrase; replace with your own generator
+    words = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot"]
+    return " ".join(rng.sample(words, 4))
+
+def evaluate(candidate: str) -> bool:
+    # Replace with your system-under-test invocation
+    return "alpha" in candidate
+
+samples = adaptive_random_testing(
+    make_candidate,
+    evaluate,
+    pool_size=5,
+    max_iterations=3,
+    seed=42,
+)
+for sample in samples:
+    print(sample.iteration, sample.distance_to_previous, sample.result)
+```
+
+## Development
+
+- Build artifacts: `python -m build`
+- Install locally in editable mode: `pip install -e .`
+
+Feel free to extend the helpers in `src/randomtest/generator.py` to fit your projects.
