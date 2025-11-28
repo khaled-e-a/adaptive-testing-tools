@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "adaptive-testing-tools"
 version = "0.1.1"
-description = "Small helpers for generating random data in tests."
+description = "Adaptive random testing helpers for Python."
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "Khaled Ahmed" }]
@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Software Development :: Testing",
     "License :: OSI Approved :: MIT License",
 ]
-license = { file = "LICENSE" }
+license = "MIT"
 dependencies = ["rapidfuzz>=3.0"]
 
 [tool.setuptools]
