@@ -2,8 +2,12 @@ import random
 
 import pytest
 
-import randomtest.adaptive as adaptive
-from randomtest import adaptive_random_testing, levenshtein_distance, select_fscs_candidate
+import adaptive_testing_tools.adaptive as adaptive
+from adaptive_testing_tools import (
+    adaptive_random_testing,
+    levenshtein_distance,
+    select_fscs_candidate,
+)
 
 
 def test_levenshtein_matches_known_value() -> None:

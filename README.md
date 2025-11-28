@@ -1,6 +1,6 @@
-# randomtest
+# adaptive-testing-tools
 
-Lightweight helpers for generating quick random data in tests and scripts. The package ships a few convenience functions so you can avoid rewriting simple generators in every project.
+Adaptive random testing helpers for generating spread-out random inputs and a few small random data utilities.
 
 ## Installation
 
@@ -13,7 +13,7 @@ pip install .
 ## Usage
 
 ```python
-from randomtest import random_choice, random_int, random_string
+from adaptive_testing_tools import random_choice, random_int, random_string
 
 value = random_int(10, 99)
 letter = random_choice(["a", "b", "c"])
@@ -21,7 +21,7 @@ token = random_string(length=12)
 
 # Adaptive random testing with FSCs
 from random import Random
-from randomtest import adaptive_random_testing
+from adaptive_testing_tools import adaptive_random_testing
 
 def make_candidate(rng: Random) -> str:
     # Example: random 4-word phrase; replace with your own generator
