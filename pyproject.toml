@@ -20,7 +20,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Testing",
-    "License :: OSI Approved :: MIT License",
 ]
 license = "MIT"
 dependencies = ["rapidfuzz>=3.0"]
