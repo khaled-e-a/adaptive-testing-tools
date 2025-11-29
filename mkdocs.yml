@@ -1,0 +1,19 @@
+site_name: adaptive-testing-tools
+repo_url: https://github.com/khaled-e-a/adaptive-testing-tools
+site_url: https://github.com/khaled-e-a/adaptive-testing-tools
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - API Reference:
+      - adaptive_testing_tools: api.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: true
+            separate_signature: true

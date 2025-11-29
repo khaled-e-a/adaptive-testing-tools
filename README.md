@@ -51,4 +51,10 @@ for sample in samples:
 - Build artifacts: `python -m build`
 - Install locally in editable mode: `pip install -e .`
 
-Feel free to extend the helpers in `src/randomtest/generator.py` to fit your projects.
+Feel free to extend the helpers in `src/adaptive_testing_tools/generator.py` to fit your projects.
+
+## Documentation (MkDocs)
+
+- Install docs deps: `pip install mkdocs mkdocs-material mkdocstrings[python]`
+- Serve locally: `mkdocs serve`
+- Build static site: `mkdocs build`
