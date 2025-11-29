@@ -55,6 +55,9 @@ Feel free to extend the helpers in `src/adaptive_testing_tools/generator.py` to 
 
 ## Documentation (MkDocs)
 
+API documentation is available at: https://khaled-e-a.github.io/adaptive-testing-tools/
+
+To build it yourself:
 - Install docs deps: `pip install mkdocs mkdocs-material mkdocstrings[python]`
 - Serve locally: `mkdocs serve`
 - Build static site: `mkdocs build`
