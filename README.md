@@ -2,6 +2,9 @@
 
 [![PyPI](https://img.shields.io/pypi/v/adaptive-testing-tools.svg)](https://pypi.org/project/adaptive-testing-tools/)
 
+<img src="img/logo.png" alt="adaptive-testing-tools logo" width="180" />
+
+
 
 Adaptive random testing helpers for generating spread-out random inputs and a few small random data utilities.
 
